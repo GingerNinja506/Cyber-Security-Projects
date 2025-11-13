@@ -56,4 +56,21 @@ This is *not* a false positive pattern — all indicators align with genuine mal
 
 The double-extension file and untrusted domain confirm malicious activity.
 
+## 6. Escalation Recommendation
+
+As this alert has been confirmed as a **True Positive involving malware execution**, 
+the incident exceeds L1 remediation scope.
+
+Recommended escalation to **SOC L2 / Incident Response** for:
+
+- Full host containment  
+- Malware sample analysis  
+- Review of persistence mechanisms  
+- Lateral movement checks  
+- Network/EDR telemetry correlation  
+- User interview and phishing awareness follow-up
+
+L1 triage completed. Awaiting L2 handling.
+
+
 
