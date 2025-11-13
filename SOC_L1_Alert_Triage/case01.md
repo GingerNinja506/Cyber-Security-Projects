@@ -12,3 +12,16 @@ It is the oldest alert with the highest severity, making it the correct first ch
 
 <img width="1524" height="629" alt="image" src="https://github.com/user-attachments/assets/bf5a604c-2790-416e-ab03-94d27d6cb865" />
 
+## 1. Initial Handling
+The alert **"Potential Data Exfiltration" (Critical severity)** was identified as the highest-priority item in the queue.
+
+Actions taken:
+- **Assigned the alert to myself (L1)**  
+- **Changed status to "In Progress"**  
+- Confirmed that no previous triage actions had been performed  
+- Began the analysis workflow following standard SOC L1 procedure
+
+<img width="672" height="466" alt="image" src="https://github.com/user-attachments/assets/e299e8dc-86a6-41a3-8a76-65ccbfde8580" />
+
+
+
