@@ -74,6 +74,24 @@ Below are the exact questions from the room and my answers, including the SPL qu
 
 ## **4. What is the username associated with IP 107.14.182.38?**
 
+Method:
+To identify the username tied to a specific IP address, I filtered the logs directly in the Splunk Search Head using a simple SPL query that narrows results to that IP only.
+
+SPL Query Used:
+
+Source="VPNlogs.json" host="ip-10-10-40-195" sourcetype="_json" Source_ip="107.14.182.38"
+
+
+Explanation:
+Adding the condition Source_ip="107.14.182.38" restricts the search to only those events coming from the target IP.
+Splunk returned 26 matching events, all containing the field:
+
+UserName: Smith
+
+<img width="1907" height="871" alt="Zrzut ekranu 2025-11-14 165059" src="https://github.com/user-attachments/assets/fe6bd5dc-c227-43d3-b2f6-feb4d90412e1" />
+
+**Answer:** Smith
+
 
 
 
