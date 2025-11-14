@@ -76,3 +76,23 @@ APT28 sends phishing emails containing malicious hyperlinks, tricking users into
 Answer:
 
 Malicious File and Malicious Link
+
+**4. Scripting Interpreters Used by APT28**
+
+Question
+If the above technique was successful, which scripting interpreters should Sunny search for to identify successful execution?
+
+Techniques Identified
+According to the MITRE ATT&CK Navigator layer for APT28, the group frequently relies on scripting interpreters to execute payloads once initial user execution succeeds:
+
+PowerShell (T1059.001)
+APT28 downloads and executes PowerShell scripts to perform reconnaissance, run commands, and deploy additional payloads.
+
+Windows Command Shell (T1059.003)
+APT28 uses cmd.exe and batch scripts for macro execution, payload staging, and running embedded commands.
+<img width="454" height="335" alt="image" src="https://github.com/user-attachments/assets/859410e5-67c0-4bd8-97f7-0b306f5ef38a" />
+<img width="605" height="313" alt="image" src="https://github.com/user-attachments/assets/64cb6b63-a9c3-43e3-bdc7-6b925057d466" />
+
+
+Answer
+Powershell and Windows Command shell
