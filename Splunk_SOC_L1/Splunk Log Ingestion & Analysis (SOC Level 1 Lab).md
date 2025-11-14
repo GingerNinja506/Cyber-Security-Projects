@@ -56,8 +56,16 @@ Below are the exact questions from the room and my answers, including the SPL qu
 <img width="1916" height="917" alt="Zrzut ekranu 2025-11-14 161004" src="https://github.com/user-attachments/assets/0fdcf851-6efd-42b0-91c3-f424bfe0a145" />
 
 4. Reviewed and finalized the ingestion
+<img width="1917" height="915" alt="Zrzut ekranu 2025-11-14 161027" src="https://github.com/user-attachments/assets/258ed62e-c8a7-4edc-916f-3c43655aceea" />
 
-**Screenshot: Add Data workflow**  
+---
+
+## **2. How many events are pressent in log file.**
+
+### <img width="1908" height="912" alt="Zrzut ekranu 2025-11-14 161125" src="https://github.com/user-attachments/assets/4411aae6-3462-4b06-8c4d-18dd8e589b79" />
+
+
+
 
 
 
