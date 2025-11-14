@@ -200,7 +200,6 @@ SharePoint
 Question
 
 Although the APT had collected the data, it could not connect to the C2 for data exfiltration. To thwart any attempts to do that, what types of proxy might the APT use?
-Answer format: <technique 1> and <technique 2>
 
 Techniques Identified
 
