@@ -90,6 +90,7 @@ APT28 downloads and executes PowerShell scripts to perform reconnaissance, run c
 
 Windows Command Shell (T1059.003)
 APT28 uses cmd.exe and batch scripts for macro execution, payload staging, and running embedded commands.
+
 <img width="454" height="335" alt="image" src="https://github.com/user-attachments/assets/859410e5-67c0-4bd8-97f7-0b306f5ef38a" />
 <img width="605" height="313" alt="image" src="https://github.com/user-attachments/assets/64cb6b63-a9c3-43e3-bdc7-6b925057d466" />
 
