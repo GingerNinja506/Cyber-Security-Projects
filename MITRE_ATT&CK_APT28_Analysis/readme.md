@@ -108,8 +108,8 @@ MITRE ATT&CK shows that APT28 uses persistence mechanisms involving Windows Regi
 
 Registry Run Keys / Startup Folder (T1547.001)
 APT28 deploys malware that writes itself into Run keys or the Startup folder, ensuring it executes automatically upon system boot or user logon.
-<img width="405" height="264" alt="image" src="https://github.com/user-attachments/assets/1dc33ed9-97b0-4be9-acf9-cf3585f84db0" />
 
+<img width="405" height="264" alt="image" src="https://github.com/user-attachments/assets/1dc33ed9-97b0-4be9-acf9-cf3585f84db0" />
 
 Answer:
 Registry Run Keys / Startup Folder
