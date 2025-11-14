@@ -64,6 +64,18 @@ Below are the exact questions from the room and my answers, including the SPL qu
 
 ### <img width="1908" height="912" alt="Zrzut ekranu 2025-11-14 161125" src="https://github.com/user-attachments/assets/4411aae6-3462-4b06-8c4d-18dd8e589b79" />
 
+**Answer:** 2862
+
+## **3. How many log events are captured by the user Maleena?**
+
+<img width="871" height="526" alt="Zrzut ekranu 2025-11-14 161244" src="https://github.com/user-attachments/assets/e4bae92a-0d6d-4834-89ed-ec44d6b62aee" />
+
+**Answer:** 60
+
+## **4. What is the username associated with IP 107.14.182.38?**
+
+
+
 
 
 
