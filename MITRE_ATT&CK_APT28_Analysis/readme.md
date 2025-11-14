@@ -194,3 +194,29 @@ This aligns with E-corp’s concern about compromised internal repositories.
 Answer
 
 SharePoint
+
+**10. Proxies Used for Exfiltration Attempts**
+
+Question
+
+Although the APT had collected the data, it could not connect to the C2 for data exfiltration. To thwart any attempts to do that, what types of proxy might the APT use?
+Answer format: <technique 1> and <technique 2>
+
+Techniques Identified
+
+Based on the MITRE ATT&CK Navigator layer for APT28, the group makes use of the following proxy techniques:
+
+External Proxy (T1090.002)
+Used to route traffic through attacker-controlled infrastructure to hide the true origin.
+
+Multi-hop Proxy (T1090.003)
+Used to chain multiple proxies together, increasing anonymity and making traceability significantly harder.
+
+<img width="490" height="364" alt="image" src="https://github.com/user-attachments/assets/2d1b2107-aec2-4a1a-a480-b19e79ccac5c" />
+
+<img width="544" height="233" alt="image" src="https://github.com/user-attachments/assets/e359e207-f56f-4be5-94fb-5a80a6012b93" />
+
+
+Answer
+
+External Proxy and Multi-hop Proxy
