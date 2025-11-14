@@ -160,6 +160,7 @@ Answer
 Network Sniffing
 
 **8.Lateral Movement via Remote Service Exploitation**
+
 Question
 It looks like the APT achieved lateral movement by exploiting remote services. Which remote services should Sunny observe to identify APT activity traces?
 Technique Identified
