@@ -95,5 +95,21 @@ APT28 uses cmd.exe and batch scripts for macro execution, payload staging, and r
 <img width="605" height="313" alt="image" src="https://github.com/user-attachments/assets/64cb6b63-a9c3-43e3-bdc7-6b925057d466" />
 
 
-Answer
+Answer:
 Powershell and Windows Command shell
+
+**5. Persistence via Registry Keys**
+
+Question
+While looking at the scripting interpreters identified in Q4, Sunny found some obfuscated scripts that changed the registry. Assuming these changes are for maintaining persistence, which registry keys should Sunny observe to track these changes?
+
+Techniques Identified
+MITRE ATT&CK shows that APT28 uses persistence mechanisms involving Windows Registry modifications:
+
+Registry Run Keys / Startup Folder (T1547.001)
+APT28 deploys malware that writes itself into Run keys or the Startup folder, ensuring it executes automatically upon system boot or user logon.
+<img width="405" height="264" alt="image" src="https://github.com/user-attachments/assets/1dc33ed9-97b0-4be9-acf9-cf3585f84db0" />
+
+
+Answer:
+Registry Run Keys / Startup Folder
