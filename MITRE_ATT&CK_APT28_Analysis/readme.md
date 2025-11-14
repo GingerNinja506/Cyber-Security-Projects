@@ -158,3 +158,16 @@ APT28 uses tools such as Respondr or Wi-Fi interception equipment, and may drop 
 
 Answer
 Network Sniffing
+
+**8.Lateral Movement via Remote Service Exploitation**
+Question
+It looks like the APT achieved lateral movement by exploiting remote services. Which remote services should Sunny observe to identify APT activity traces?
+Technique Identified
+APT28 is documented using SMB/Windows Admin Shares (T1021.002) for lateral movement.
+This technique involves mapping network drives using valid credentials and abusing administrative shares (such as C$, ADMIN$, or custom SMB shares) to move laterally and execute attacker-controlled payloads across the network.
+
+<img width="606" height="250" alt="image" src="https://github.com/user-attachments/assets/ca21dddf-5183-4fbc-886e-9819bdd2cda0" />
+
+
+Answer
+SMB/Windows Admin Shares
