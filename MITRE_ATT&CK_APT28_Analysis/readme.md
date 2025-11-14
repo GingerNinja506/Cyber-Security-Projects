@@ -139,3 +139,22 @@ Using rundll32 to execute payloads delivered through phishing
 
 Answer:
 Rundll32
+
+**7. Discovery Technique Used by APT28**
+
+Question
+Sunny identified tcpdump on one of the compromised hosts. Assuming this was placed there by the threat actor, which technique might the APT be using here for discovery?
+
+Technique Identified
+APT28 is known to deploy packet capture utilities to intercept traffic, capture credentials, and perform internal network reconnaissance.
+
+Highlighted MITRE technique:
+
+Network Sniffing (T1040)
+APT28 uses tools such as Respondr or Wi-Fi interception equipment, and may drop tools like tcpdump to capture network packets and extract usernames, hashes, or sensitive data.
+
+<img width="440" height="528" alt="image" src="https://github.com/user-attachments/assets/f2f15cfb-1c9c-4b0f-92e5-abfe8bdabdeb" />
+
+
+Answer
+Network Sniffing
