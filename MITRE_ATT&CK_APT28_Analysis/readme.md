@@ -54,3 +54,25 @@ Evidence (screenshots)
 Answer:
 
 Email Accounts (T1586.002)
+
+**3. User Execution Techniques Used by APT28**
+Question:
+
+E-corp has found that the APT might have gained initial access using social engineering to make the user execute code for the threat actor. Sunny wants to identify if the APT was also successful in execution. What two techniques of user execution should Sunny look out for?
+
+Techniques Identified
+
+Based on the MITRE ATT&CK Navigator layer for APT28, two user-execution techniques are highlighted:
+
+Malicious File (T1204.002)
+APT28 delivers Microsoft Office documents containing malicious macro scripts, prompting users to open and run the payload.
+
+Malicious Link (T1204.001)
+APT28 sends phishing emails containing malicious hyperlinks, tricking users into executing attacker-controlled code.
+<img width="520" height="314" alt="image" src="https://github.com/user-attachments/assets/3ea8d77b-dca6-411b-a3e8-662289d69c17" />
+<img width="406" height="262" alt="image" src="https://github.com/user-attachments/assets/70c00479-57ae-4184-84e8-df66ac0da2d9" />
+
+
+Answer:
+
+Malicious File and Malicious Link
