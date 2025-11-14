@@ -92,6 +92,22 @@ UserName: Smith
 
 **Answer:** Smith
 
+## **5. What is the number of events that originated from all countries except France?**
+
+Method:
+To determine how many VPN events originated from all countries except France, I applied a simple SPL filter in the Search Head.
+By adding a negation condition on the Source_Country field, Splunk excludes all events where the country equals “France”.
+
+SPL Query Used:
+
+source="VPNlogs.json" host="ip-10-10-40-195" sourcetype="_json" Source_Country!="France"
+
+<img width="1906" height="917" alt="Zrzut ekranu 2025-11-14 165341" src="https://github.com/user-attachments/assets/6f6de0e9-9c0b-4f69-99bd-51306454e935" />
+
+Explanation:
+The operator != tells Splunk to remove all events where Source_Country is exactly “France”.
+Splunk returned 2,814 events, representing all VPN connections from every other country.
+
 
 
 
