@@ -113,3 +113,29 @@ APT28 deploys malware that writes itself into Run keys or the Startup folder, en
 
 Answer:
 Registry Run Keys / Startup Folder
+
+**6. System Binary Proxy Execution**
+
+Question
+Sunny identified that the APT executes system binaries to evade defenses. Which system binary's execution should Sunny scrutinize for proxy execution?
+
+Technique Identified
+APT28 is known to abuse System Binary Proxy Execution (T1218) to run malicious payloads using trusted Windows binaries.
+The MITRE ATT&CK layer highlights:
+
+Rundll32 (T1218.011)
+APT28 frequently uses rundll32.exe to execute malicious DLL payloads, leveraging it as a trusted system binary to bypass security controls.
+
+Examples from MITRE notes:
+
+Executing malicious DLLs via:
+rundll32.exe C:\Windows\twain_64.dll
+
+Using rundll32 in initial loader stages
+
+Using rundll32 to execute payloads delivered through phishing
+
+<img width="548" height="490" alt="image" src="https://github.com/user-attachments/assets/263d72c3-c649-4067-8a7d-04a95c1a1e45" />
+
+Answer:
+Rundll32
