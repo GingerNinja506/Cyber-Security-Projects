@@ -163,6 +163,8 @@ Network Sniffing
 
 Question
 It looks like the APT achieved lateral movement by exploiting remote services. Which remote services should Sunny observe to identify APT activity traces?
+
+
 Technique Identified
 APT28 is documented using SMB/Windows Admin Shares (T1021.002) for lateral movement.
 This technique involves mapping network drives using valid credentials and abusing administrative shares (such as C$, ADMIN$, or custom SMB shares) to move laterally and execute attacker-controlled payloads across the network.
