@@ -109,6 +109,25 @@ Explanation:
 The operator != tells Splunk to remove all events where Source_Country is exactly “France”.
 Splunk returned 2,814 events, representing all VPN connections from every other country.
 
+**Answer** 2814
+
+## **6. How many VPN events were associated with the IP 107.3.206.58?**
+
+Method:
+To identify all VPN activity related to a specific IP address, I filtered the dataset using an SPL query that matches only events where the Source_ip field equals the target IP.
+
+SPL Query Used:
+
+source="VPNlogs.json" host="ip-10-10-40-195" sourcetype="_json" Source_ip="107.3.206.58"
+
+<img width="1901" height="895" alt="image" src="https://github.com/user-attachments/assets/c0e60d29-2fbe-411a-a40c-086c277557f2" />
+
+Explanation:
+This query narrows the results to events generated only by that IP.
+Splunk returned 14 matching events.
+
+**Answer** 14
+
 
 
 
