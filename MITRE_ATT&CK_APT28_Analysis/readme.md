@@ -174,3 +174,23 @@ This technique involves mapping network drives using valid credentials and abusi
 
 Answer
 SMB/Windows Admin Shares
+
+**9. Likely Targeted Information Repository**
+
+Question
+
+It looked like the primary goal of the APT was to steal intellectual property from E-corp's information repositories. Which information repository can be the likely target of the APT?
+
+Technique Identified
+
+APT28 is documented collecting sensitive data from SharePoint (T1213.002).
+They have accessed Microsoft SharePoint services inside target environments to extract documents, internal files, and intellectual property.
+
+This aligns with E-corp’s concern about compromised internal repositories.
+
+<img width="308" height="235" alt="image" src="https://github.com/user-attachments/assets/ce5e79da-4681-4802-b567-38cc9f1f17e0" />
+
+
+Answer
+
+SharePoint
