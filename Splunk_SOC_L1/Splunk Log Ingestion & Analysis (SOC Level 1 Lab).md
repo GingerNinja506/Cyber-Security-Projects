@@ -102,7 +102,8 @@ SPL Query Used:
 
 source="VPNlogs.json" host="ip-10-10-40-195" sourcetype="_json" Source_Country!="France"
 
-<img width="1906" height="917" alt="Zrzut ekranu 2025-11-14 165341" src="https://github.com/user-attachments/assets/6f6de0e9-9c0b-4f69-99bd-51306454e935" />
+<img width="1906" height="917" alt="Zrzut ekranu 2025-11-14 165341" src="https://github.com/user-attachments/assets/543f4ca4-3f02-469e-9c66-3d93414c122a" />
+
 
 Explanation:
 The operator != tells Splunk to remove all events where Source_Country is exactly “France”.
