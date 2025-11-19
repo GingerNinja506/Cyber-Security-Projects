@@ -1,0 +1,21 @@
+Message for Recruiters
+
+For the past year I have been learning cybersecurity alongside my Scrum Master role. My focus shifted between the two areas, which slowed down my technical progression.
+Since mid-2025 I am fully committed to transitioning into security, with a clear direction: SOC / IT Security / Threat Analysis.
+
+I have already completed most of the previous TryHackMe SOC Level 1 path, but the learning track was recently updated. I decided to restart it from the beginning to cover the new modules and to refresh fundamentals after the period focused on Scrum.
+
+This time I am documenting the key steps, investigations, methodologies, and reasoning directly in this repository.
+The portfolio is in progress, but the incomplete sections do not reflect a lack of knowledge — they reflect the deliberate choice to rebuild the entire SOC path from scratch in a structured, professional format.
+
+My goal is to demonstrate:
+
+practical analysis capabilities,
+
+the ability to break down incidents and phishing cases,
+
+understanding of attacker behaviour and OSINT,
+
+structured documentation aligned with SOC workflows.
+
+The repository will continue to expand with additional cases, threat analysis notes, and blue-team projects.
