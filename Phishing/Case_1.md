@@ -91,6 +91,53 @@ The HTML contained a `<meta http-equiv="refresh">` tag and a fallback hyperlink 
 **Answer (defanged):**  
 `hxxp://kennaroads[.]buzz/data/Update365/office365/40e7baa2f826a57fcf04e5202526f8bd/?email=zoe.duncan@swiftspend.finance&error`
 
+### 4. What is the URL to the .zip archive of the phishing kit? (defanged format)
+
+**Method:**  
+Followed the redirection link associated with Zoe Duncan in the sandbox VM.  
+The malicious HTML attachment forwarded the victim to a phishing landing page hosted on:
+
+hxxp[://]kennaroads[.]buzz/data/Update365/office365/40e7baa2f826a57fcf04e5202526f8bd/enterpassword[.]php?93A39917635544516884ca137f3c3624d1bf46b9e7bbdba86884ca137f3c3624d1bf46b9e7bbdba86884ca137f3c3624d1bf46b9e7bbdba86884ca137f3c3624d1bf46b9e7bbdba86884ca137f3c3624d1bf46b9e7bbdba8&email=zoe[.]duncan@swiftspend[.]finance&error=
+
+The page replicated Microsoft’s login portal and pre-filled the victim’s email (`zoe.duncan@swiftspend.finance`) to increase credibility.  
+Password submission would POST credentials directly to the attacker-controlled backend.  
+The page was served over **HTTP (Not Secure)**, confirming data exposure.
+
+<img width="1846" height="892" alt="image" src="https://github.com/user-attachments/assets/4d47020e-5276-49dd-bed1-91b0627b5dd5" />
+
+
+After confirming the credential-harvesting interface, the directory structure was enumerated by removing URL path segments.  
+
+<img width="1257" height="54" alt="image" src="https://github.com/user-attachments/assets/98fa0a61-701a-42e3-9df9-20994bd6c3f2" />
+<img width="391" height="69" alt="image" src="https://github.com/user-attachments/assets/e0f8d95a-6613-420c-82c7-7fb24977dfb1" />
+
+
+Directory indexing was enabled on the server, exposing:
+<img width="703" height="414" alt="image" src="https://github.com/user-attachments/assets/7c37d071-55c3-4272-ac6c-e004be7959a2" />
+
+<img width="650" height="404" alt="image" src="https://github.com/user-attachments/assets/536f000e-d94d-4665-82d9-42f006e0e6a1" />
+
+**Answer (defanged):**  
+`hxxp://kennaroads[.]buzz/data/Update365.zip`
+
+### 5.What is the SHA256 hash of the phishing kit archive?
+
+Inside the directory, the phishing kit archive `Update365.zip` was publicly accessible.
+
+The ZIP archive was downloaded and its integrity/hash was verified using:
+sha256sum Update365.zip
+
+<img width="788" height="98" alt="image" src="https://github.com/user-attachments/assets/4271fc47-6d72-4cbb-8722-be8771eaab7e" />
+
+Result:
+
+ba3c15267393419e0bc27b6252b86bb39b406ef300ae8a18fee4d16b19ac9686 Update365.zip
+
+
+
+
+
+
 
 
 
