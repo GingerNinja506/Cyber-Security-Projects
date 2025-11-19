@@ -96,6 +96,61 @@ Here we will usse tool mxtoolbox we could also do it as in previous task in term
 **Answer**
 v=DMARC1; p=quarantine; fo=1
 
+### 9. What is the name of the attachment?
+
+**Method:**  
+Opened the email in **Thunderbird** and inspected the attachment pane displayed below the message body.  
+Thunderbird shows the attachment exactly as it appears in the MIME structure, allowing direct extraction of the filename.
+
+<img width="475" height="84" alt="image" src="https://github.com/user-attachments/assets/3e9aaff0-b26b-4af3-8f11-b2f42988d539" />
+
+
+**Answer:**  
+SWT_#09674321___PDF__.CAB
+
+### 10. What is the SHA256 hash of the file attachment?
+
+**Method:**  
+Downloaded the attachment from Thunderbird to the analysis VM.  
+Used the Linux `sha256sum` utility to compute the cryptographic hash of the file.
+
+Command executed:
+
+bash
+sha256sum SWT_#09674321___PDF__.CAB
+
+<img width="734" height="170" alt="image" src="https://github.com/user-attachments/assets/41f05ee4-82e8-47a3-bf6b-7945c48f20d1" />
+
+### 11. What is the attachment’s file size? (NUM KB)
+
+**Method:**  
+Uploaded the attachment to **VirusTotal** to verify its metadata.  
+Located the file size under **Details → Basic Properties → File size**.
+
+<img width="1759" height="842" alt="image" src="https://github.com/user-attachments/assets/56477efd-8061-41bd-bd69-cab6523996f1" />
+
+**Answer:**  
+400.26 KB
+
+### 12. What is the actual file extension of the attachment?
+
+**Method:**  
+Although Thunderbird displays the attachment as a **.CAB** file, a deeper inspection was required.  
+Uploaded the file to **VirusTotal** and reviewed the **Details → Basic Properties** section.
+
+Multiple fields (`File type`, `Magic`, `TrID`, `Magika`) all identify the file as a **RAR archive**.
+
+This confirms the **real extension** is not `.CAB` but **`.RAR`** — a common obfuscation trick used in phishing/malware delivery.
+
+<img width="874" height="552" alt="image" src="https://github.com/user-attachments/assets/c023ace4-ba27-4bdf-b838-bca89f4592e0" />
+
+**Answer:**  
+RAR
+
+
+
+
+
 
 
 
