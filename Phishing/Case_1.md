@@ -48,8 +48,25 @@ The investigation included:
 
 ## Tasks & Solutions
 
-### 1. Identify the sender email address  
-**Method:** Inspect the `From:` header  
-**Answer:** …
+### 1. Who is the individual who received an email attachment containing a PDF?
+
+**Method:**  
+Searched all email samples for references to PDF attachments by matching the `.pdf` pattern inside MIME headers.  
+
+Command used: grep "\.pdf" ./phish-emails/*
+
+<img width="932" height="501" alt="image" src="https://github.com/user-attachments/assets/f86a37b0-e0b6-4c7d-9efb-21384a065c64" />
+
+<img width="928" height="608" alt="image" src="https://github.com/user-attachments/assets/44d88f90-358e-4ea8-b5cf-87d9f7138851" />
+
+<img width="819" height="267" alt="image" src="https://github.com/user-attachments/assets/8ad6c38a-d537-40f4-aa6a-d74f858a9d96" />
+
+**Answer:**  
+**William McClean**
+
+
+
+
+
 
 
