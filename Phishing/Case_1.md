@@ -12,7 +12,7 @@ The goal of this lab is to demonstrate practical phishing analysis skills: inspe
 - **Platform:** TryHackMe  
 - **Room:** *Snapped Phishing Line*  
 - **Operating System:** Linux VM  
-- **Tools:** Firefox, email header viewer, VirusTotal, URLScan, WHOIS, passive DNS, CTI tooling
+
 
 ---
 
