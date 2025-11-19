@@ -133,6 +133,20 @@ Result:
 
 ba3c15267393419e0bc27b6252b86bb39b406ef300ae8a18fee4d16b19ac9686 Update365.zip
 
+### 5. When was the phishing kit archive first submitted? (format: YYYY-MM-DD HH:MM:SS UTC)
+
+**Method:**  
+Computed the SHA-256 hash of the phishing kit (`Update365.zip`) and queried the hash on VirusTotal.  
+Navigated to the **Details** tab and retrieved the timestamp listed under **First Submission**.
+
+<img width="1910" height="660" alt="image" src="https://github.com/user-attachments/assets/38902e5b-7f36-4722-bbcd-9f6a8bdada3c" />
+
+<img width="584" height="173" alt="image" src="https://github.com/user-attachments/assets/5d845288-c20a-46a8-933a-4c7cc28bb2e6" />
+
+**Answer:**  
+**2020-04-08 21:55:50 UTC**
+
+
 
 
 
