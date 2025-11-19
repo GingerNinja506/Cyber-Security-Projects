@@ -184,6 +184,22 @@ $send = "m3npat@yandex.com";.
 
 <img width="1523" height="760" alt="image" src="https://github.com/user-attachments/assets/53977dc8-1f99-4990-beba-54afd5c831b4" />
 
+### 8. The adversary used other email addresses in the obtained phishing kit. What is the email address that ends in "@gmail.com"?
+
+**Method:**  
+Examined auxiliary phishing modules included in the kit, specifically the Yahoo-based phishing variant located in:
+
+`/Update365/office365/script.st`
+
+Identified an alternative hard-coded credential receiver used for that phishing flow.  
+The variable `$to` in the script pointed to an attacker-controlled Gmail address:
+
+$to = "janestanner2299@gmail.com";
+
+<img width="1567" height="783" alt="image" src="https://github.com/user-attachments/assets/5c6e7a33-6b0b-4370-a45f-c03863c506bb" />
+
+
+
 
 
 
