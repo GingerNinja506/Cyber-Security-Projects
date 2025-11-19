@@ -179,10 +179,14 @@ Extracted the phishing kit (`Update365.zip`) and inspected the Office365 phishin
 Searched for hard-coded email receivers in PHP handler files.  
 The file `submit.php` contained the variable responsible for sending stolen credentials to the adversary:
 
-```php
-$send = "m3npat@yandex.com";
 
-<img width="1523" height="760" alt="image" src="https://github.com/user-attachments/assets/24c10c45-ddd0-4c9d-b9e7-7fbd8ccd7c4a" />
+$send = "m3npat@yandex.com";.
+
+<img width="1523" height="760" alt="image" src="https://github.com/user-attachments/assets/53977dc8-1f99-4990-beba-54afd5c831b4" />
+
+
+
+
 
 
 
