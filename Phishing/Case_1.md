@@ -72,7 +72,7 @@ Opened the identified phishing email and inspected the `From:` header to extract
 <img width="948" height="172" alt="image" src="https://github.com/user-attachments/assets/bae08aad-15f4-4fe7-bfd9-7bb6eceb0629" />
 
 **Answer:**  
-**Accounts.Payable@groupmarketingonline.icu**
+**Accounts[.]Payable@groupmarketingonline[.]icu**
 
 
 
