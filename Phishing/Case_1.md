@@ -64,6 +64,17 @@ Command used: grep "\.pdf" ./phish-emails/*
 **Answer:**  
 **William McClean**
 
+### 2. What email address was used by the adversary to send the phishing emails?
+
+**Method:**  
+Opened the identified phishing email and inspected the `From:` header to extract the sender's email address used by the adversary.
+
+<img width="948" height="172" alt="image" src="https://github.com/user-attachments/assets/bae08aad-15f4-4fe7-bfd9-7bb6eceb0629" />
+
+**Answer:**  
+**Accounts.Payable@groupmarketingonline.icu**
+
+
 
 
 
