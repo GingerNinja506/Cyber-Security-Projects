@@ -1,3 +1,30 @@
+# TryHackMe – SOC Level 1
+
+## Phishing Investigation – Practical Lab Documentation
+
+This repository contains my hands-on work from the **“Email Header Analysis”** case in the SOC Level 1 path on TryHackMe.  
+The purpose of this lab is to demonstrate practical analysis of a suspicious email reported by an employee.  
+The investigation focuses on header forensics, sender validation, attachment inspection, and identification of malicious indicators.
+
+The analysis included:
+
+- Inspecting the raw email headers to identify sender infrastructure
+- Extracting and validating Return-Path, From, Reply-To, and Originating IP fields
+- Performing OSINT and WHOIS lookups on the sending IP address
+- Verifying SPF and DMARC records for the Return-Path domain
+- Examining the suspicious file attachment (CAB/RAR archive)
+- Computing cryptographic hashes and cross-checking them on VirusTotal
+- Identifying Indicators of Compromise (IoCs)
+
+This case replicates typical SOC L1 triage workflow for suspicious inbound emails, demonstrating skills required for real-world phishing investigations.
+
+## Environment
+
+- **Platform:** TryHackMe  
+- **Room:** Email Header Analysis (SOC Level 1 Path)  
+- **Operating System:** Linux VM (Thunderbird + CLI Tools)
+
+
 ### 1. What is the Transfer Reference Number listed in the email's Subject?
 
 **Method:**  
