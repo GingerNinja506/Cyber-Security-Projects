@@ -17,11 +17,6 @@ The goal of this lab is to demonstrate practical phishing analysis skills: inspe
 ---
 
 ## Core Concepts Practiced
-
-- Email structure analysis (headers + body)  
-- Received-chain inspection  
-- Spoofing detection  
-- SPF / DKIM / DMARC validation  
 - URL and redirect chain analysis  
 - Credential harvesting detection  
 - Phishing kit retrieval  
