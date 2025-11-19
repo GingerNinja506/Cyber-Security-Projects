@@ -169,6 +169,21 @@ Both entries showed:
 **Answer:**  
 **michael.ascott@swiftspend.finance**
 
+### 7. What was the email address used by the adversary to collect compromised credentials?
+
+**Method:**  
+Extracted the phishing kit (`Update365.zip`) and inspected the Office365 phishing workflow located in:
+
+`/Update365/office365/Validation/`
+
+Searched for hard-coded email receivers in PHP handler files.  
+The file `submit.php` contained the variable responsible for sending stolen credentials to the adversary:
+
+```php
+$send = "m3npat@yandex.com";
+
+<img width="1523" height="760" alt="image" src="https://github.com/user-attachments/assets/24c10c45-ddd0-4c9d-b9e7-7fbd8ccd7c4a" />
+
 
 
 
