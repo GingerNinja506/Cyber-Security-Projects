@@ -146,6 +146,30 @@ Navigated to the **Details** tab and retrieved the timestamp listed under **Firs
 **Answer:**  
 **2020-04-08 21:55:50 UTC**
 
+### 6. What was the email address of the user who submitted their password twice?
+
+**Method:**  
+Opened the attacker’s credential log file at:
+
+`hxxp://kennaroads[.]buzz/data/Update365/log.txt`
+
+Reviewed each captured credential entry.  
+Identified the victim whose email appeared twice with duplicate password submissions.
+
+Both entries showed:
+
+- identical email address  
+- two separate timestamps  
+- two captured password submissions
+
+<img width="1190" height="374" alt="image" src="https://github.com/user-attachments/assets/0f95a749-0707-433b-ba04-d96a39733147" />
+
+<img width="1087" height="762" alt="image" src="https://github.com/user-attachments/assets/0fd6e416-18bf-4b2a-95df-e2cc9df7a5b8" />
+
+**Answer:**  
+**michael.ascott@swiftspend.finance**
+
+
 
 
 
