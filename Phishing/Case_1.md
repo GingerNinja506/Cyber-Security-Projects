@@ -74,6 +74,26 @@ Opened the identified phishing email and inspected the `From:` header to extract
 **Answer:**  
 **Accounts[.]Payable@groupmarketingonline[.]icu**
 
+### 3. What is the redirection URL to the phishing page for the individual Zoe Duncan? (defanged format)
+
+**Method:**  
+Identified Zoe Duncan’s phishing email and extracted the HTML attachment (`Direct Credit Advice.html`).  
+Viewed the file contents using:
+cat Direct\ Credit\ Advice.html
+
+<img width="1832" height="441" alt="image" src="https://github.com/user-attachments/assets/11d299fc-949e-40ca-9776-0adf564e110c" />
+
+
+The HTML contained a `<meta http-equiv="refresh">` tag and a fallback hyperlink pointing to the phishing redirect URL.
+
+<img width="1363" height="599" alt="image" src="https://github.com/user-attachments/assets/5263d296-a45e-4d16-8a23-6c572bf9bdfb" />
+
+**Answer (defanged):**  
+`hxxp://kennaroads[.]buzz/data/Update365/office365/40e7baa2f826a57fcf04e5202526f8bd/?email=zoe.duncan@swiftspend.finance&error`
+
+
+
+
 
 
 
