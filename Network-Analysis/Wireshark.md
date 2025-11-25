@@ -221,6 +221,28 @@ Under the **Severity: Warning** category, Wireshark displayed the total number o
 #### Answer
 1636
 
+### 13. Go to packet 33790, follow the HTTP stream, and review the responses.  
+### What is the total number of artists?
+
+#### Method  
+Navigated to packet **33790** and selected:  
+`Follow → HTTP Stream`.
+
+The displayed HTML content represented a page listing all available artists.  
+Inside the response body, the relevant section appeared as:
+
+<img width="1911" height="917" alt="image" src="https://github.com/user-attachments/assets/c5c32c48-a77e-476c-acff-36f0fed2edc4" />
+
+We can also extract this packet and download on local machine in this casse linux VM and we can see it like that:
+
+<img width="1155" height="735" alt="image" src="https://github.com/user-attachments/assets/2781054d-579d-48b8-a5b0-b376f4471152" />
+
+### Answer
+3
+
+
+
+
 
 
 
