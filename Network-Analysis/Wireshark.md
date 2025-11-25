@@ -85,6 +85,21 @@ Performed the following steps:
 #### Answer
 99958e145afe69a59b03f53712e6084b788ec09bed4ad9094a941c0c438942a3
 
+### 4. View packet number 38. Which markup language is used under the HTTP protocol?
+
+#### Method  
+Navigated to packet **38** in `Exercise.pcapng`.  
+Expanded the protocol layers in the packet details pane.  
+Under **Hypertext Transfer Protocol**, an additional data structure was present showing the markup used.
+
+The final decoded layer was labeled **extensible Markup Language**, indicating XML content embedded in the HTTP response.
+
+<img width="993" height="770" alt="image" src="https://github.com/user-attachments/assets/8d3313d5-711f-4ab4-93bb-4c5f019adf6d" />
+
+#### Ansswer
+eXtensible Markup Language
+
+
 
 
 
