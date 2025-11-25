@@ -1,4 +1,4 @@
-# TryHackMe – SOC Level 1
+<img width="738" height="524" alt="image" src="https://github.com/user-attachments/assets/00c0978e-221f-4155-a3dd-366648ca403d" /># TryHackMe – SOC Level 1
 
 ## Wireshark The Basics – Practical Lab Documentation
 
@@ -122,6 +122,98 @@ The TTL value was clearly shown in the decoded IPv4 header.
 
 #### Answer
 47
+
+### 7. What is the TCP payload size?
+
+#### Method  
+Opened packet **38** and expanded the **Transmission Control Protocol** section.  
+Located the field labeled **TCP payload**, which shows the size of the application data carried inside the TCP segment.
+
+The payload size is displayed directly in parentheses next to the field name.
+
+<img width="1048" height="229" alt="image" src="https://github.com/user-attachments/assets/47f0c939-d51d-481c-811a-86a9ff4cc499" />
+
+#### Answer
+424
+
+### 8. What is the E-Tag value?
+
+#### Method  
+Opened packet **38** and expanded the **Hypertext Transfer Protocol** section.  
+Scrolled through the HTTP response headers to locate the field **ETag**, which uniquely identifies the specific version of the returned resource.
+
+The value is shown directly next to the `ETag:` header.
+
+<img width="1051" height="231" alt="image" src="https://github.com/user-attachments/assets/d5a1fd84-78fd-4a5f-b3d8-df273b177983" />
+
+#### Answer
+9a01a-4696-7e354b00
+
+### 9. Search the "r4w" string in packet details. What is the name of artist 1?
+
+#### Method  
+Used Wireshark’s **Find Packet** feature:
+
+1. Opened `Exercise.pcapng`.
+2. Pressed `Ctrl + F` and selected search type **String**, search in **Packet bytes / Packet details**.
+3. Searched for the string `r4w`.  
+4. The match appeared inside an HTTP response containing HTML:
+   ```html
+   painted by: <a href='artists.php?artist=1'>r4w8173</a>
+
+<img width="1038" height="288" alt="image" src="https://github.com/user-attachments/assets/e7f973fe-da4a-4916-add9-853c87b6b662" />
+
+#### Answer
+r4w8173
+
+### 10. Go to packet 12 and read the packet comments. What is the answer?
+
+#### Method  
+Opened packet **12** in `Exercise.pcapng` and reviewed the **Packet Comments** section.  
+The comment instructed to extract the embedded JPEG file and compute its **MD5** hash.
+
+Since this was the same image previously exported from packet **39765**, reused the already extracted file (`picture`) and calculated the MD5 hash using:
+
+``bash
+md5sum picture
+
+<img width="738" height="524" alt="image" src="https://github.com/user-attachments/assets/f5ae06a5-5b98-46fe-86e8-43e4227dcba2" />
+
+#### Answer
+911cd574a42865a956ccde2d04495ebf
+
+### 11. There is a ".txt" file inside the capture file. Find the file and read it; what is the alien's name?
+
+#### Method  
+Opened `Exercise.pcapng` and navigated to:  
+`File → Export Objects → HTTP`.
+
+In the HTTP object list:
+
+- Applied a filter for `.txt`
+- Identified the file **note.txt**
+- Saved it to the Desktop
+- Used the terminal to read its contents:
+
+``bash
+cat note.txt
+
+<img width="561" height="563" alt="image" src="https://github.com/user-attachments/assets/c2cfb3a5-9dc5-4155-a50e-dacac5a43d8f" />
+<img width="747" height="546" alt="image" src="https://github.com/user-attachments/assets/106aea23-4fbf-43e7-8973-fe8fdedaba75" />
+<img width="1254" height="835" alt="image" src="https://github.com/user-attachments/assets/344e3a4c-0984-44e8-8baf-d8b7422cca49" />
+
+#### Answer
+PACKETMASTER
+
+
+
+
+
+
+
+
+
+
 
 
 
