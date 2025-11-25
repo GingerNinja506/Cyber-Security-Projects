@@ -99,6 +99,21 @@ The final decoded layer was labeled **extensible Markup Language**, indicating X
 #### Answer
 eXtensible Markup Language
 
+### 5. What is the arrival date of the packet? (Answer format: Month/Day/Year)
+
+#### Method  
+Opened packet **38** in `Exercise.pcapng`.  
+Expanded the **Frame** section and located the field **Arrival Time**, which displays the full timestamp of when the packet was captured.
+
+<img width="1339" height="383" alt="image" src="https://github.com/user-attachments/assets/964b2f63-61ed-4c49-a09f-f762387fca7c" />
+
+#### Answer
+05/13/2004
+
+
+
+
+
 
 
 
