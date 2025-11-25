@@ -96,7 +96,7 @@ The final decoded layer was labeled **extensible Markup Language**, indicating X
 
 <img width="993" height="770" alt="image" src="https://github.com/user-attachments/assets/8d3313d5-711f-4ab4-93bb-4c5f019adf6d" />
 
-#### Ansswer
+#### Answer
 eXtensible Markup Language
 
 
