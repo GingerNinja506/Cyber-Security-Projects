@@ -64,6 +64,29 @@ The **Packets** field displays the total number of captured packets.
 
 #### Answer  
 58620
+### 3. What is the SHA256 hash value of the extracted image?
+
+#### Method  
+The hint inside **Capture File Comments** pointed to packet **39765**, which contains a reassembled JPEG image.
+
+Performed the following steps:
+
+1. Navigated to packet **39765** in `Exercise.pcapng`.  
+2. Expanded the packet details and located the **JPEG File Interchange Format** section.  
+3. Right-clicked the packet → **Export Packet Bytes…**  
+4. Saved the extracted file as `picture` on the Desktop.  
+5. Calculated the SHA-256 hash using:
+   ```bash
+   sha256sum picture
+<img width="1435" height="57" alt="image" src="https://github.com/user-attachments/assets/61673135-1e61-4ef9-9d66-bcb793cdf37e" />
+<img width="988" height="744" alt="image" src="https://github.com/user-attachments/assets/8f68da11-11df-42e4-ae30-7ce3bdd39101" />
+<img width="739" height="483" alt="image" src="https://github.com/user-attachments/assets/7fc5114d-9177-4232-b873-2eb6f397a275" />
+
+#### Answer
+99958e145afe69a59b03f53712e6084b788ec09bed4ad9094a941c0c438942a3
+
+
+
 
 
 
