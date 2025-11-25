@@ -110,6 +110,20 @@ Expanded the **Frame** section and located the field **Arrival Time**, which dis
 #### Answer
 05/13/2004
 
+### 6. What is the TTL value?
+
+#### Method  
+Opened packet **38** and expanded the **Internet Protocol Version 4** section.  
+Inside the IPv4 header fields, located the parameter **Time to live (TTL)**, which indicates the maximum number of router hops allowed before the packet is discarded.
+
+The TTL value was clearly shown in the decoded IPv4 header.
+
+<img width="1043" height="361" alt="image" src="https://github.com/user-attachments/assets/2d5ffc1f-228b-4a0a-81e9-e71d8aa03c52" />
+
+#### Answer
+47
+
+
 
 
 
