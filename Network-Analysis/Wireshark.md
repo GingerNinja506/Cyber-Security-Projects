@@ -54,4 +54,16 @@ Reviewed the **Capture File Comments** section containing author-embedded notes.
 #### Answer
 TryHackMe_Wireshark_Demo 
 
+### 2. What is the total number of packets?
+
+#### Method  
+Opened the file `Exercise.pcapng` and checked the status bar at the bottom of Wireshark.  
+The **Packets** field displays the total number of captured packets.
+
+<img width="1397" height="862" alt="image" src="https://github.com/user-attachments/assets/3be55a30-1939-4ee8-9fd5-08a8709ebbff" />
+
+#### Answer  
+58620
+
+
 
