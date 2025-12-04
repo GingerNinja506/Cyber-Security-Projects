@@ -37,7 +37,6 @@ The Snort version and build information is accessed by running the `snort` comma
 
 ```bash
 snort -V
-asdasdsad
 ```
 <img width="755" height="232" alt="image" src="https://github.com/user-attachments/assets/36e9f7d3-9aeb-4308-9f9e-632bdbfb80c3" />
 
