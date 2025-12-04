@@ -60,6 +60,21 @@ snort -c /etc/snort/snort.conf -T
 **Answer**
 4151
 
+### Task3: Test the current instance with "/etc/snort/snortv2.conf" file and check how many rules are loaded with the current build.
+
+#### Method
+To determine how many rules are loaded with the specific configuration file `snortv2.conf`, we execute Snort in test mode pointing to that file.
+
+**Command:**
+
+```bash
+snort -T -c /etc/snort/snortv2.conf
+```
+<img width="705" height="293" alt="image" src="https://github.com/user-attachments/assets/9e0f165c-7a9a-408e-b4e5-acc59b425be3" />
+**Answer**
+1
+
+
 
 
 
