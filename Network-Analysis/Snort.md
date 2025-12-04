@@ -27,7 +27,7 @@ This repository contains my hands-on work from the **"Snort"** lab in the SOC 1 
 
 ## 📝 Tasks & Solutions
 
-### 1. Task 1: Run the Snort instance and check the build number.
+###  Task 1: Run the Snort instance and check the build number.
 
 #### Method
 
@@ -42,6 +42,24 @@ snort -V
 
 **Answer**
 149
+
+### Task 2: Test the current instance with "/etc/snort/snort.conf" file and check how many rules are loaded with the current build.
+
+#### Method
+
+To test the current Snort configuration and verify the number of rules loaded, we use the `snort` command with the **`-c`** flag to specify the configuration file path (`/etc/snort/snort.conf`) and the **`-T`** flag to enable **test mode**. This mode validates the configuration syntax and loads the rules without starting the sniffing engine. The output summary confirms the number of rules successfully read.
+
+**Command:**
+
+```bash
+snort -c /etc/snort/snort.conf -T
+```
+
+<img width="745" height="329" alt="image" src="https://github.com/user-attachments/assets/ae828cba-013c-4d3c-a78a-2efaddb668a0" />
+
+**Answer**
+4151
+
 
 
 
