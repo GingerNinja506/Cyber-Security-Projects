@@ -71,6 +71,7 @@ To determine how many rules are loaded with the specific configuration file `sno
 snort -T -c /etc/snort/snortv2.conf
 ```
 <img width="705" height="293" alt="image" src="https://github.com/user-attachments/assets/9e0f165c-7a9a-408e-b4e5-acc59b425be3" />
+
 **Answer**
 1
 
