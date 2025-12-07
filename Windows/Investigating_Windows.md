@@ -336,6 +336,43 @@ Therefore, the compromise can be attributed to the date the malicious accounts w
 #### **Answer**  
 **03/02/2019**
 
+### **10. What tool was used to get Windows passwords?**
+
+#### **Method**
+
+Suspicious files were discovered in the directory:
+
+`C:\TMP`
+
+Several filenames suggested credential dumping activity, including:
+
+- `mim`
+- `mim-out`
+- multiple temporary files and PowerShell scripts
+
+Screenshot:  
+<img width="904" height="522" alt="image" src="https://github.com/user-attachments/assets/dcd669cd-d516-4032-885e-85c2511709ca" />
+
+
+The file **mim-out** was opened for inspection.  
+Its contents clearly show the output of the well-known credential-dumping tool **Mimikatz**, including:
+
+- tool banner  
+- module used: `sekurlsa::logonpasswords`  
+- extracted NTLM, SHA1, and plaintext credentials  
+
+Screenshot:  
+<img width="700" height="804" alt="image" src="https://github.com/user-attachments/assets/e8b4ef89-d47c-40d6-83e9-845e47b30d42" />
+
+
+This confirms that the attacker used **Mimikatz** to extract Windows credentials.
+
+---
+
+#### **Answer**  
+**Mimikatz**
+
+
 
 
 
