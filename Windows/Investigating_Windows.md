@@ -475,6 +475,16 @@ The port **1337** is commonly used by attackers because it resembles **"leet" (1
 
 **1337**
 
+### **14. Check for DNS poisoning — what site was targeted?**
+
+### **Method**
+
+To check for DNS poisoning, the Windows **hosts** file was examined as in task 11:
+
+We know that google was assigned to suspicious adresses so the Answer is:
+**google.com**
+
+
 
 
 
