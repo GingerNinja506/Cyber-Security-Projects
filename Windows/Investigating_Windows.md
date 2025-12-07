@@ -384,6 +384,8 @@ the **Windows hosts file** was reviewed:
 Screenshot:  
 <img width="902" height="421" alt="image" src="https://github.com/user-attachments/assets/f37c6ce6-733a-4692-a2dc-277ecb0ab5bb" />
 
+<img width="626" height="671" alt="image" src="https://github.com/user-attachments/assets/43650223-461f-41ae-a57f-4e3d583a44e3" />
+
 
 A normal hosts file contains only default localhost entries.  
 However, this one contained suspicious modifications:
@@ -399,9 +401,6 @@ A WHOIS lookup was performed to verify the ownership of this IP:
 
 Screenshot:  
 <img width="1263" height="464" alt="image" src="https://github.com/user-attachments/assets/75ab9801-ca92-425d-9e18-5a1ad8d5b7bb" />
-
-<img width="626" height="671" alt="image" src="https://github.com/user-attachments/assets/270bcba9-bcc3-4859-aa77-7b175b8d3fac" />
-
 
 
 Findings:
