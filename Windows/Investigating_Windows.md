@@ -372,6 +372,52 @@ This confirms that the attacker used **Mimikatz** to extract Windows credentials
 #### **Answer**  
 **Mimikatz**
 
+### **11. What was the attacker's external control and command server's IP?**
+
+#### **Method**
+
+To determine whether the attacker tampered with DNS resolution or redirected legitimate traffic,  
+the **Windows hosts file** was reviewed:
+
+`C:\Windows\System32\drivers\etc\hosts`
+
+Screenshot:  
+<img width="902" height="421" alt="image" src="https://github.com/user-attachments/assets/f37c6ce6-733a-4692-a2dc-277ecb0ab5bb" />
+
+
+A normal hosts file contains only default localhost entries.  
+However, this one contained suspicious modifications:
+
+```
+76.32.97.132 google.com
+76.32.97.132 www.google.com
+```
+
+These entries forcibly redirect traffic intended for Google services to an external IP address.
+
+A WHOIS lookup was performed to verify the ownership of this IP:
+
+Screenshot:  
+<img width="1263" height="464" alt="image" src="https://github.com/user-attachments/assets/75ab9801-ca92-425d-9e18-5a1ad8d5b7bb" />
+
+
+Findings:
+
+- The IP belongs to **AS20001 – TWC-PACWEST / Charter Communications (USA ISP)**  
+- It does **not** belong to Google  
+- It does **not** map to any legitimate Google infrastructure  
+- It has appeared in malware-related reports, despite not being flagged as malicious
+
+This confirms that the attacker used DNS poisoning in the hosts file to redirect outbound traffic  
+to an external **Command & Control (C2)** server.
+
+---
+
+#### **Answer**
+
+**76.32.97.132**
+
+
 
 
 
