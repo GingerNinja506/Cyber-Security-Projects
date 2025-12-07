@@ -93,7 +93,8 @@ To identify the last logged-in user, the **Windows Event Viewer** was examined:
    - Logon Timestamp  
 
    Screenshot:  
-   ![event-filter](./images/event_filter_4624.png)
+   <img width="539" height="547" alt="image" src="https://github.com/user-attachments/assets/d318006a-d086-4543-ae98-1493fc5a44f3" />
+
 
 3. Reviewed the most recent **4624** event at the top of the filtered list.  
    The “New Logon” section indicates which account successfully authenticated last.
