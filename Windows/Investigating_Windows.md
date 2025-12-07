@@ -1,4 +1,4 @@
-# TryHackMe – Windows Forensics Challenge
+# TryHackMe – Windows Investigation Challenge
 
 ## Practical Lab Documentation
 
