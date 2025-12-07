@@ -10,7 +10,7 @@ The goal of this lab is to practice foundational SOC and DFIR skills: host triag
 ## Environment
 
 - **Platform:** TryHackMe  
-- **Room:** Windows Forensics Challenge  
+- **Room:** Windows Investigation Challenge  
 - **Operating System:** Windows Server 2016 Datacenter  
 
 ---
