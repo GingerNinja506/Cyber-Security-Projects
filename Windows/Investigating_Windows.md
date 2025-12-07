@@ -308,6 +308,34 @@ Therefore, Event Viewer provides no additional information.
 #### **Answer**  
 **Never**
 
+### **9. At what date did the compromise take place?**
+
+#### **Method**
+
+To establish the date of compromise, the analysis focused on identifying the **earliest malicious system modification**.  
+In Windows investigations, the creation of **unauthorized user accounts** is a strong indicator of compromise, as attackers often generate new accounts immediately after gaining access.
+
+Using the commands:
+
+`net user John`  
+`net user Jenny`
+
+both accounts show the same timestamp for **Password last set**, which also corresponds to the **account creation time**:
+
+- **John:** 3/2/2019 4:52:25 PM  
+- **Jenny:** 3/2/2019 4:52:25 PM  
+
+
+
+Since these user accounts did not exist before this moment and represent the attacker gaining persistence, this timestamp is the earliest reliable artifact of malicious activity on the host.
+
+Therefore, the compromise can be attributed to the date the malicious accounts were created.
+
+---
+
+#### **Answer**  
+**03/02/2019**
+
 
 
 
