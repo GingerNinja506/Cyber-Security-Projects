@@ -419,6 +419,32 @@ to an external **Command & Control (C2)** server.
 
 **76.32.97.132**
 
+### **12. What was the extension name of the shell uploaded via the server's website?**
+
+#### **Method**
+
+To identify which file the attacker uploaded to the web server, the IIS root directory was inspected:
+
+`C:\inetpub\wwwroot`
+
+Screenshot:  
+<img width="1127" height="311" alt="Zrzut ekranu 2025-12-07 195634" src="https://github.com/user-attachments/assets/1b359300-6bdf-456d-81ba-6d64e3a0d46a" />
+
+Inside the directory, several files were present. Two of them were JSP files:
+
+- `b.jsp`
+- `test.jsp`
+
+JSP (JavaServer Pages) web shells are commonly used by attackers on Windows IIS servers when Java support is enabled.  
+The presence of these recently modified `.jsp` files strongly indicates that the attacker uploaded a JSP-based web shell.
+
+---
+
+#### **Answer**
+
+**.jsp**
+
+
 
 
 
