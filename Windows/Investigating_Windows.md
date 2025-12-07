@@ -1,1 +1,76 @@
+# TryHackMe – Windows Forensics Challenge
+
+## Practical Lab Documentation
+
+This repository contains my hands-on forensic investigation of a compromised Windows Server host provided in the TryHackMe room.  
+The goal of this lab is to practice foundational SOC and DFIR skills: host triage, artifact examination, privilege auditing, scheduled task analysis, and identifying malicious activity on Windows systems.
+
+---
+
+## Environment
+
+- **Platform:** TryHackMe  
+- **Room:** Windows Forensics Challenge  
+- **Operating System:** Windows Server 2016 Datacenter  
+
+---
+
+## Core Concepts Practiced
+
+- Enumerating Windows system information and versioning  
+- Auditing user logon activity and account privileges  
+- Reviewing Windows Event Logs (Security, System)  
+- Inspecting Scheduled Tasks for persistence  
+- Identifying suspicious network connections and ports  
+- Analyzing attacker behaviour and timeline reconstruction  
+- Detecting indicators of compromise on a Windows host  
+
+---
+
+## Scenario (Background)
+
+The target VM represents a Windows Server system that was previously compromised.  
+The objective is to investigate system artifacts, reconstruct the attacker’s actions, and identify all relevant indicators.
+
+This includes:
+
+- Inspecting Windows OS metadata and configuration  
+- Reconstructing user activity (logon events, timestamps)  
+- Detecting privilege escalation and admin group membership changes  
+- Identifying persistence mechanisms (scheduled tasks, scripts)  
+- Reviewing malicious network activity or C2 communication  
+- Establishing an incident timeline  
+
+This documentation reflects the exact steps performed during the investigation.
+
+---
+
+## Tasks & Solutions
+
+### **1. What’s the version and year of the Windows machine?**
+
+#### **Method**
+
+To determine the OS version, two verification methods were used:
+
+1. **Command-line inspection**  
+   Executed the `winver` command from an elevated Command Prompt to display OS edition and version details.
+
+   Screenshot:  
+   ![winver-output](./images/winver.png)
+
+2. **GUI navigation**  
+   Navigated to:  
+   `Control Panel → System and Security → System`  
+   This provides full system metadata including edition, processor type, and activation information.
+
+   Screenshot:  
+   ![system-properties](./images/system_properties.png)
+
+Both methods confirm the same Windows version.
+
+#### **Answer**  
+**Windows Server 2016**
+
+---
 
