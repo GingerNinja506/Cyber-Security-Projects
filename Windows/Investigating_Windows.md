@@ -270,6 +270,44 @@ Since this is the only daily task executing a non-standard script, it is the mal
 #### **Answer**  
 **nc.ps1**
 
+### **8. When did Jenny last logon?**
+
+#### **Method**
+
+Two approaches were considered to determine Jenny’s last logon time:
+
+---
+
+### **Method 1: Command Line (net user)**
+
+Executed the following command:
+
+`net user Jenny`
+
+The output includes a **Last logon** field, which for Jenny is set to:
+
+**Never**
+
+Screenshot:  
+![net-user-jenny](./images/net_user_jenny.png)
+
+---
+
+### **Method 2: Event Viewer**
+
+Attempted to locate logon events in:
+
+`Event Viewer → Windows Logs → Security`
+
+However, since Jenny has **never logged in**, no Event ID **4624** entries exist for this account.  
+Therefore, Event Viewer provides no additional information.
+
+---
+
+#### **Answer**  
+**Never**
+
+
 
 
 
