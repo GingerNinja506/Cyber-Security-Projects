@@ -243,6 +243,34 @@ This confirms that **Clean file system** is the malicious persistence mechanism.
 #### **Answer**  
 **Clean file system**
 
+### **7. What file was the task trying to run daily?**
+
+#### **Method**
+
+Reviewed all scheduled tasks in:
+
+`Task Scheduler → Task Scheduler Library`
+
+Only two tasks were configured to run **daily**:
+
+- **check logged in** → executes Internet Explorer (benign)
+- **Clean file system** → suspicious task
+
+Opening **Clean file system → Actions** shows that it launches the following script:
+
+`C:\TMP\nc.ps1 -l 1348`
+
+Screenshot:  
+<img width="1165" height="480" alt="image" src="https://github.com/user-attachments/assets/c0a749f1-5819-4d8d-96a1-50d18b78b062" />
+
+Since this is the only daily task executing a non-standard script, it is the malicious file referenced.
+
+---
+
+#### **Answer**  
+**nc.ps1**
+
+
 
 
 
