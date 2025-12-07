@@ -444,6 +444,38 @@ The presence of these recently modified `.jsp` files strongly indicates that the
 
 **.jsp**
 
+### **13. What was the last port the attacker opened?**
+
+### **Method**
+
+To identify which ports were manually opened by the attacker, the **Windows Firewall with Advanced Security** interface was reviewed:
+
+`Control Panel > System and Security > Windows Defender Firewall > Advanced Settings > Inbound Rules`
+
+The rules were sorted by **creation time** to determine which firewall change was added last.
+
+A suspicious inbound rule stood out:
+
+- **Name:** Allow outside connections for development  
+- **Protocol:** TCP  
+- **Local Port:** **1337**  
+- **Remote Port:** All  
+- **Action:** Allow  
+- **Enabled:** Yes  
+
+Screenshot:  
+<img width="1652" height="786" alt="image" src="https://github.com/user-attachments/assets/2914ef67-ffea-4b80-a942-f857a43924df" />
+
+
+The port **1337** is commonly used by attackers because it resembles **"leet" (1337)**, a term originating from hacker subculture meaning *elite*. It is frequently used in reverse shells and backdoor listeners.
+
+---
+
+### **Answer**
+
+**1337**
+
+
 
 
 
