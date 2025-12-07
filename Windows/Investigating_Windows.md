@@ -212,6 +212,38 @@ Since the question excludes the built-in **Administrator** account, the remainin
 #### **Answer**  
 **Guest, Jenny**
 
+### **6. What is the name of the scheduled task that is malicious?**
+
+#### **Method**
+
+Opened **Task Scheduler** and reviewed tasks under:  
+`Task Scheduler Library`
+
+Several entries appeared suspicious, but one task stood out after inspecting its **Actions** tab.
+
+The task named **Clean file system** executes the following command:
+
+`C:\TMP\nc.ps1 -l 1348`
+
+Screenshot:  
+<img width="1362" height="456" alt="image" src="https://github.com/user-attachments/assets/7ee5bb32-128f-4c6f-b77b-12d88c4fbaff" />
+
+
+The referenced script **nc.ps1** was opened in PowerShell ISE for validation.  
+Its content shows it is **PowerCat**, a PowerShell implementation of netcat, often used for establishing listeners or backdoors.
+
+Screenshot:  
+<img width="1268" height="427" alt="image" src="https://github.com/user-attachments/assets/740224cd-ed32-4822-ba6b-e285e57e6877" />
+
+
+This confirms that **Clean file system** is the malicious persistence mechanism.
+
+---
+
+#### **Answer**  
+**Clean file system**
+
+
 
 
 
