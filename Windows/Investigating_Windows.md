@@ -75,4 +75,35 @@ Both methods confirm the same Windows version.
 **Windows Server 2016**
 
 ---
+### **2. Which user logged in last?**
+
+#### **Method**
+
+To identify the last logged-in user, the **Windows Event Viewer** was examined:
+
+1. Navigated to:  
+   `Event Viewer → Windows Logs → Security`
+
+2. Applied a filter on the **Security** log using the **Event ID: 4624**  
+   (Successful Logon events).  
+   This event contains fields such as:
+   - Account Name  
+   - Account Domain  
+   - Logon Type  
+   - Logon Timestamp  
+
+   Screenshot:  
+   ![event-filter](./images/event_filter_4624.png)
+
+3. Reviewed the most recent **4624** event at the top of the filtered list.  
+   The “New Logon” section indicates which account successfully authenticated last.
+
+   Screenshot:  
+   <img width="1230" height="645" alt="image" src="https://github.com/user-attachments/assets/ee822170-8325-4971-9431-977a1850f646" />
+
+
+#### **Answer**  
+**Administrator**
+
+---
 
