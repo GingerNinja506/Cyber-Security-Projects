@@ -182,5 +182,36 @@ Other startup entries do not contain any network-related commands or external IP
 #### **Answer**  
 **10.34.2.3**
 
+### **5. What two accounts had administrative privileges (other than the Administrator user)?**
+
+#### **Method**
+
+To identify which users belong to the **local Administrators group**, the following command was executed in Command Prompt:
+
+`net localgroup "Administrators"`
+
+This command enumerates all members of the Administrators group, including built-in and manually added accounts.
+
+Screenshot:  
+<img width="970" height="504" alt="image" src="https://github.com/user-attachments/assets/25ffa02b-7ef9-4c66-ba18-038294000cfa" />
+
+
+The output reveals three accounts with administrative privileges:
+
+- Administrator  
+- Guest  
+- Jenny  
+
+Since the question excludes the built-in **Administrator** account, the remaining two users with elevated privileges are:
+
+- **Guest**  
+- **Jenny**
+
+---
+
+#### **Answer**  
+**Guest, Jenny**
+
+
 
 
