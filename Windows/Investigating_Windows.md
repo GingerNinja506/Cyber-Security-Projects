@@ -289,7 +289,8 @@ The output includes a **Last logon** field, which for Jenny is set to:
 **Never**
 
 Screenshot:  
-![net-user-jenny](./images/net_user_jenny.png)
+<img width="1011" height="534" alt="image" src="https://github.com/user-attachments/assets/c5462560-9b24-4ed2-bc1d-e0ada26e4f40" />
+
 
 ---
 
