@@ -400,6 +400,9 @@ A WHOIS lookup was performed to verify the ownership of this IP:
 Screenshot:  
 <img width="1263" height="464" alt="image" src="https://github.com/user-attachments/assets/75ab9801-ca92-425d-9e18-5a1ad8d5b7bb" />
 
+<img width="626" height="671" alt="image" src="https://github.com/user-attachments/assets/270bcba9-bcc3-4859-aa77-7b175b8d3fac" />
+
+
 
 Findings:
 
