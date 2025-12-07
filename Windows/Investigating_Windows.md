@@ -108,3 +108,48 @@ To identify the last logged-in user, the **Windows Event Viewer** was examined:
 
 ---
 
+### **3. When did John log onto the system last?**
+
+#### **Method**
+
+To determine the last logon timestamp for the user **John**, two independent verification methods were used.
+
+---
+
+### **Method 1: Command Line (net user)**
+
+Used the built-in Windows command:
+
+`net user John`
+
+This command displays detailed account attributes, including the **Last logon** field.
+
+Screenshot:  
+<img width="979" height="506" alt="image" src="https://github.com/user-attachments/assets/4a89898d-7075-4ec7-9f33-5d2f2c8cc82b" />
+
+
+The output shows:
+
+**Last logon: 3/2/2019 5:48:32 PM**
+
+---
+
+### **Method 2: Event Viewer (Event ID 4624)**
+
+1. Opened **Event Viewer** → `Windows Logs → Security`
+2. Sorted events by newest first
+3. Used **Find** to search for “John”
+4. Reviewed the corresponding **Event ID 4624** entry for the timestamp
+
+Screenshot:  
+<img width="1189" height="750" alt="image" src="https://github.com/user-attachments/assets/b5612c3d-52da-4f5b-8173-4d6f787d0a99" />
+
+
+The timestamp corresponds to John’s most recent successful logon.
+
+---
+
+#### **Answer**  
+**03/02/2019 5:48:32 PM**
+
+
