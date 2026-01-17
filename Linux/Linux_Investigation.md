@@ -12,11 +12,13 @@ The goal of this lab is to practice foundational Linux DFIR (Digital Forensics a
 * **Architecture:** x86_64
 
 ## Core Concepts Practiced
-* **System & OS Information:** Enumerating release details, user accounts (`/etc/passwd`), and sudoers.
-* **System Configuration:** Auditing network interfaces, open ports (`netstat`), and running processes (`ps`).
-* **Persistence Mechanisms:** Inspecting Cron jobs, systemd services, and shell startup scripts (`.bashrc`).
-* **Evidence of Execution:** Analyzing command history (`.bash_history`) and authentication logs (`/var/log/auth.log`).
-* **Log Analysis:** Reviewing syslog and third-party application logs for indicators of compromise (IOCs).
+* **Log Analysis & Correlation:** Analyzing rotated logs (`auth.log.1`) to uncover historical attacker activity and correlating event timestamps.
+* **Application Artifact Forensics:** Utilizing `.viminfo` to recover deleted commands and identify hidden file operations like `saveas`.
+* **User & Privilege Auditing:** Identifying unauthorized account creation (`it-admin`) and tracking elevation of privileges via `visudo`.
+* **Persistence Detection:** Discovering and decoding malicious Cron jobs in `/etc/crontab` using **Crontab Guru** for scheduling analysis.
+* **Static Malware Analysis:** Inspecting shell script logic (`cat`) to identify indicators of compromise (IOCs) such as "Logic Bombs" and target file creation.
+* **High-Precision Timelining:** Using `ls -al --full-time` to reconstruct a minute-by-minute timeline of the incident based on filesystem metadata.
+* **Command History Recovery:** Auditing `.bash_history` to identify remote file downloads via `curl` and evidence deletion via `rm`.
 
 ---
 
