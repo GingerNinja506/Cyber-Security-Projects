@@ -154,6 +154,7 @@ Since the file `bomb.sh` was deleted from the initial location, I investigated w
 `cat /home/it-admin/.viminfo`
 
 **Screenshot:**
+
 <img width="636" height="867" alt="image" src="https://github.com/user-attachments/assets/981ee835-c1e6-40e4-8a9e-cb7703b96cb9" />
 
 
