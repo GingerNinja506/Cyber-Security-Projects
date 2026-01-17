@@ -64,3 +64,20 @@ The information regarding the working directory is embedded within the same log 
 
 #### Answer
 /home/cybert
+
+### 3. Which user was created after the package from the previous task was installed?
+
+#### Method
+To identify any new users created by the attacker or the system, I searched the authentication logs for the execution of user management binaries. 
+1. Since the volume of logs was manageable, I performed a targeted search using `grep` for the `adduser` command within `/var/log/auth.log.1`.
+2. This revealed a specific entry where the user `cybert` (acting with root privileges) created a new account.
+3. The timestamp of this action follows the previously identified package installation, confirming it as a subsequent step in the attacker's activity.
+
+**Command used:**
+`cat /var/log/auth.log.1 | grep adduser`
+
+**Screenshot:**
+<img width="1355" height="57" alt="image" src="https://github.com/user-attachments/assets/49a290ef-3115-42f6-b171-01cd29059dbe" />
+
+#### Answer
+it-admin
