@@ -216,7 +216,7 @@ To determine how the malicious script was scheduled to execute, I searched for p
 6. This confirms the script is scheduled to trigger every day at **08:00 AM**.
 
 **Command used:**
-`cat /etc/crontab`
+`nano /etc/crontab`
 
 **Screenshot:**
 
