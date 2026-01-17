@@ -200,3 +200,28 @@ To understand the impact of the discovered malicious script without executing it
 goodbye.txt
 #### Answer
 Dec 28 06:29
+
+### 10. At what time will the malicious file trigger? (Format: HH:MM AM/PM)
+
+#### Method
+To determine how the malicious script was scheduled to execute, I searched for persistence mechanisms, specifically Cron jobs.
+1. I started by searching the authentication logs for Cron-related activity using `grep cron /var/log/auth.log.1`.
+2. The logs revealed that the user `it-admin` executed `nano /etc/crontab` with root privileges at **06:30:10**.
+3. I then inspected the system-wide crontab file by running `cat /etc/crontab`.
+4. At the end of the file, I found a new entry: `0 8 * * * root /bin/os-update.sh`.
+5. Using the **Crontab Guru** tool (as suggested in the investigation hint), I translated the Cron syntax:
+   * `0` (minute)
+   * `8` (hour)
+   * `* * *` (every day, month, and day of the week)
+6. This confirms the script is scheduled to trigger every day at **08:00 AM**.
+
+**Command used:**
+`cat /etc/crontab`
+
+**Screenshot:**
+
+<img width="1126" height="354" alt="image" src="https://github.com/user-attachments/assets/2a7d216f-0cee-4800-8e03-42d486ac9648" />
+
+
+#### Answer
+08:00 AM
