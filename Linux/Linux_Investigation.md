@@ -102,3 +102,21 @@ To find when the `sudoers` file was modified, I looked for the execution of the 
 
 #### Answer
 Dec 28 06:27:34
+
+### 5. A script file was opened using the "vi" text editor. What is the name of this file?
+
+#### Method
+To identify which files were accessed or modified by the attacker using text editors, I searched the authentication logs for the execution of `vi`. 
+1. I used `grep` to filter `auth.log.1` for the string `vi`. 
+2. The results displayed a command executed by the newly created user `it-admin` with root privileges.
+3. The log entry shows that `it-admin` used `/usr/bin/vi` to open a file named `bomb.sh` located in their home directory. 
+
+**Command used:**
+`cat /var/log/auth.log.1 | grep vi`
+
+**Screenshot:**
+<img width="1316" height="212" alt="image" src="https://github.com/user-attachments/assets/cb3a4a9b-7a6e-4b8a-8bfb-db900672dfd5" />
+
+
+#### Answer
+bomb.sh
