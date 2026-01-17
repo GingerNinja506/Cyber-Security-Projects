@@ -230,4 +230,13 @@ To determine how the malicious script was scheduled to execute, I searched for p
 #### Answer
 08:00 AM
 
-Forensic Reflection: While the attacker left significant traces in .bash_history, in a real-world scenario, a sophisticated threat actor would likely clear this file. However, by correlating bash history with system authentication logs (auth.log) and application artifacts (.viminfo), I was still able to reconstruct the timeline accurately.
+---
+
+## Forensic Reflection & Best Practices
+
+During this investigation, the attacker's activity was reconstructed primarily through `.bash_history` and system logs. However, from a professional SOC perspective, it is important to note:
+
+* **Volatile Evidence:** In a real-world incident, a sophisticated threat actor would likely clear the `.bash_history` using `history -c` or by deleting the file entirely to hide their traces.
+* **Anti-Forensics Awareness:** The attacker in this scenario attempted basic masquerading by renaming `bomb.sh` to `/bin/os-update.sh`, but failed to clean the `.viminfo` file, which proved to be a critical forensic artifact.
+* **Log Reliability:** System logs like `/var/log/auth.log` are generally more reliable than bash history because they are harder to manipulate without leaving further traces of root-level tampering.
+* **Defense Recommendation:** To prevent such blind spots in a production environment (like a health-tech infrastructure), implementing **remote logging (SIEM)** and tools like **Auditd** is essential. This ensures that even if local history is wiped, the commands and file modifications are captured on a secure, external server.
