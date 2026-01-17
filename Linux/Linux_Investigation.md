@@ -161,3 +161,24 @@ Since the file `bomb.sh` was deleted from its initial location, I investigated w
 
 #### Answer
 /bin/os-update.sh
+
+### 8. When was the file from the previous question last modified? (Format: Month Day HH:MM)
+
+#### Method
+To determine the exact time the malicious script was placed in the system directory, I analyzed the file's metadata. 
+1. Initially, I was looking for a way to get a more precise timestamp than a standard `ls -l` provides. 
+2. Following the investigation hint, I learned and utilized the `ls -al --full-time` command. This was a new and valuable command for me, allowing for high-precision forensic analysis of file timestamps.
+3. I executed this command on the renamed file `/bin/os-update.sh`.
+4. The output showed a modification time of **06:29:43.998004273**.
+5. **Verification:** This timestamp perfectly correlates with the Unix timestamp found in the `.viminfo` file (1672208983), confirming exactly when the attacker finalized the file's move.
+
+**Command used:**
+`ls -al --full-time /bin/os-update.sh`
+
+**Screenshot:**
+
+<img width="824" height="84" alt="image" src="https://github.com/user-attachments/assets/8cef3547-ba6f-4508-bf8a-dc7b2e60b860" />
+
+
+#### Answer
+Dec 28 06:29
