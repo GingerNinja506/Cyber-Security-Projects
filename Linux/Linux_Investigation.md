@@ -42,6 +42,7 @@ To identify commands executed with elevated privileges, I analyzed the authentic
 
 **Screenshot:**
 <img width="1325" height="434" alt="image" src="https://github.com/user-attachments/assets/eb9143ec-1da3-488d-8f01-0f144b405498" />
+
 <img width="1343" height="43" alt="image" src="https://github.com/user-attachments/assets/5ebcb59e-cb88-4573-bf0b-9a05e2476bbe" />
 
 
