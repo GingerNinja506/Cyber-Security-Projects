@@ -81,3 +81,24 @@ To identify any new users created by the attacker or the system, I searched the 
 
 #### Answer
 it-admin
+
+### 4. A user was then later given sudo privileges. When was the sudoers file updated? (Format: Month Day HH:MM:SS)
+
+#### Method
+To find when the `sudoers` file was modified, I looked for the execution of the `visudo` command. This tool is the standard and recommended way to grant sudo privileges to users in Linux.
+1. Based on the investigation hint, I focused on identifying instances where `visudo` was called with root privileges.
+2. I executed `grep` on `auth.log.1` to filter for this specific command.
+3. The search returned two instances:
+   * **Dec 22 07:58:24:** Performed by user `ubuntu`.
+   * **Dec 28 06:27:34:** Performed by user `cybert`.
+4. Since the package installation and the creation of the `it-admin` account occurred on **Dec 28**, the second entry represents the attacker's action to solidify elevated access for the new accounts.
+
+**Command used:**
+`cat /var/log/auth.log.1 | grep visudo`
+
+**Screenshot:**
+<img width="1212" height="146" alt="image" src="https://github.com/user-attachments/assets/e01d9884-dca1-4f4c-b514-4e8d23df54d8" />
+
+
+#### Answer
+Dec 28 06:27:34
