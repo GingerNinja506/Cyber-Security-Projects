@@ -48,3 +48,19 @@ To identify commands executed with elevated privileges, I analyzed the authentic
 
 #### Answer
 /usr/bin/apt install dokuwiki
+
+### 2. What was the present working directory (PWD) when the previous command was run?
+
+#### Method
+The information regarding the working directory is embedded within the same log entry in `auth.log.1` as the installation command identified in the previous task. By analyzing the metadata of the `sudo` event for the `apt install` command, the `PWD` (Present Working Directory) field explicitly states the location from which the command was executed.
+
+**Log details analyzed:**
+* **User:** cybert
+* **Command:** /usr/bin/apt install dokuwiki
+* **PWD Field:** /home/cybert
+
+**Screenshot:**
+<img width="1412" height="52" alt="image" src="https://github.com/user-attachments/assets/685f0b4d-60a1-406b-bc40-f223607e517b" />
+
+#### Answer
+/home/cybert
