@@ -179,6 +179,24 @@ To determine the exact time the malicious script was placed in the system direct
 
 <img width="824" height="84" alt="image" src="https://github.com/user-attachments/assets/8cef3547-ba6f-4508-bf8a-dc7b2e60b860" />
 
+### 9. What is the name of the file that will get created when the malicious script executes?
 
+#### Method
+To understand the impact of the discovered malicious script without executing it, I performed a static analysis of its contents.
+1. I navigated to `/bin/` and used the `cat` command to read the source code of `os-update.sh`.
+2. Upon reviewing the script, I identified a conditional logic block that triggers if a certain output is empty.
+3. The final line of this block uses the `echo` command and a redirection operator (`>`) to create a new file in the root directory.
+4. The script is designed to output a taunting message into a file named `goodbye.txt`.
+
+**Command used:**
+`cat /bin/os-update.sh`
+
+**Screenshot:**
+
+<img width="1165" height="201" alt="image" src="https://github.com/user-attachments/assets/8203f3be-d875-488f-817a-0201b64f57d1" />
+
+
+#### Answer
+goodbye.txt
 #### Answer
 Dec 28 06:29
