@@ -229,3 +229,5 @@ To determine how the malicious script was scheduled to execute, I searched for p
 
 #### Answer
 08:00 AM
+
+Forensic Reflection: While the attacker left significant traces in .bash_history, in a real-world scenario, a sophisticated threat actor would likely clear this file. However, by correlating bash history with system authentication logs (auth.log) and application artifacts (.viminfo), I was still able to reconstruct the timeline accurately.
