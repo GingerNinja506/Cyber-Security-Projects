@@ -2,7 +2,7 @@
 
 Thank you for reviewing my GitHub portfolio.
 
-I have been learning cybersecurity for about a year in an on-and-off way, mainly because I was still focused on my Scrum Master role. At this point, I am fully committed to transitioning into security, with a strong focus on SOC and defensive analysis.
+
 
 I have already completed most of the original TryHackMe SOC Level 1 path. Recently, the path was updated with new content, so I decided to go through it again from the beginning — this time documenting every key step, technique, and conclusion here in this repository.
 
